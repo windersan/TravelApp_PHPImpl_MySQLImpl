@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Purchase</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link  href="css/styles.css"  rel="stylesheet" type="text/css" >
+    </head>
+    <body>
+        
+        
+        
+        <header> ADD NEW PURCHASE </header>
+        <nav>
+            <a href=index.html style="color:darkblue"
+               onmouseover="this.style.color='blue'"
+               onmouseout="this.style.color='darkblue'"> Home </a><br/>
+            <a href=create.html style="color:darkblue"
+               onmouseover="this.style.color='blue'"
+               onmouseout="this.style.color='darkblue'"> New User </a><br/>
+            <a href=account.html style="color:darkblue"
+               onmouseover="this.style.color='blue'"
+               onmouseout="this.style.color='darkblue'"> Account </a><br/>
+            <a href=transaction.html style="color:darkblue"
+               onmouseover="this.style.color='blue'"
+               onmouseout="this.style.color='darkblue'"> New Transaction </a><br/>
+            <a href=photo.html style="color:darkblue"
+               onmouseover="this.style.color='blue'"
+               onmouseout="this.style.color='darkblue'"> Photos and Journal </a><br/>
+            <a href=about.html style="color:darkblue"
+               onmouseover="this.style.color='blue'"
+               onmouseout="this.style.color='darkblue'"> About site </a><br/>
+            <a href=mybio.html style="color:darkblue"
+               onmouseover="this.style.color='blue'"
+               onmouseout="this.style.color='darkblue'"> About author </a><br/>
+        </nav>
+        
+        
+        <main>
+            <div style="padding:10px">
+                
+                <form id="createform" name="form1" action="Process.php" 
+                      method="post"
+                      onsubmit="return submit1()">
+                    <fieldset>
+                        <legend>Purchase</legend>
+                        Item<br>
+                        <input type="text" class="2submit_p" id="pur1"><br><br>
+                        Cost<br>
+                        <input type="text" class="2submit_p" id="pur2"><br><br>
+                        Currency<br>
+                        <input type="text" class="2submit_p" id="pur3"><br><br>
+                        Description<br>
+                        <input type="email" class="2submit_p" id="pur4"><br><br>
+                        Date<br>
+                        <input type="text" class="2submit_p" id="pur6"><br><br>
+                        City<br>
+                        <input type="text" class="2submit_p" id="pur7"><br><br>
+                        Country<br>
+                        <input type="text" class="2submit_p" id="pur8"><br><br>
+                       
+                        
+                        <input type="submit" value="SUBMIT">
+                        
+                    </fieldset>
+                </form>
+                
+                
+                
+                
+                
+                
+            </div>
+        </main>
+        
+        
+        
+        
+        
+    </body>
+</html>
