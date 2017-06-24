@@ -53,15 +53,15 @@ and open the template in the editor.
                     <fieldset>
                         <legend>Create account</legend>
                         First Name<br>
-                        <input type="text" class="2submit" id="1"><br><br>
+                        <input type="text" class="2submit" id="1" name="first"><br><br>
                         Last Name<br>
-                        <input type="text" class="2submit" id="2"><br><br>
+                        <input type="text" class="2submit" id="2" name="last"><br><br>
                         Email<br>
-                        <input type="email" class="2submit" id="3"><br><br>
+                        <input type="email" class="2submit" id="3" name="email"><br><br>
                         Username<br>
-                        <input type="text" class="2submit" id="4"><br><br>
+                        <input type="text" class="2submit" id="4" name="username"><br><br>
                         Password<br>
-                        <input type="password" class="2submit" id="password1"><br><br>
+                        <input type="password" class="2submit" id="password1" name="password"><br><br>
                         Confirm Password<br>
                         <input type="password" class="2submit" id="password2" 
                                oninput="passwordf()"><p id="p9" style="display:none">
@@ -78,33 +78,33 @@ and open the template in the editor.
                                     return false;
                                 }
                                 
-                                var a = document.getElementById("1").value;
-                                if(a == null || a == ""){
+                                var a1 = document.getElementById("1").value;
+                                if(a1 == null || a1 == ""){
                                     alert("Must fill out all fields");
                                         return false;
                                 }
-                                var a = document.getElementById("2").value;
-                                if(a == null || a == ""){
+                                var a2 = document.getElementById("2").value;
+                                if(a2 == null || a2 == ""){
                                     alert("Must fill out all fields");
                                         return false;
                                 }
-                                var a = document.getElementById("3").value;
-                                if(a == null || a == ""){
+                                var a3 = document.getElementById("3").value;
+                                if(a3 == null || a3 == ""){
                                     alert("Must fill out all fields");
                                         return false;
                                 }
-                                var a = document.getElementById("4").value;
-                                if(a == null || a == ""){
+                                var a4 = document.getElementById("4").value;
+                                if(a4 == null || a4 == ""){
                                     alert("Must fill out all fields");
                                         return false;
                                 }
-                                var a = document.getElementById("password1").value;
-                                if(a == null || a == ""){
+                                var a5 = document.getElementById("password1").value;
+                                if(a5 == null || a5 == ""){
                                     alert("Must fill out all fields");
                                         return false;
                                 }
-                                var a = document.getElementById("password2").value;
-                                if(a == null || a == ""){
+                                var a6 = document.getElementById("password2").value;
+                                if(a6 == null || a6 == ""){
                                     alert("Must fill out all fields");
                                         return false;
                                 }   
