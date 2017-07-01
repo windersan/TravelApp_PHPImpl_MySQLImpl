@@ -31,16 +31,23 @@ body1 {background-color : lightgray; color : darkblue}
     }
     
     main{
-        background-color:#00BCD4;
+        background-color:#4DD0E1;
         color:black;
-        width:89%;
+        width:55%;
         height:700px;
         float:left;
         overflow:scroll;
         
     }
     
-    
+    aside{
+        background-color:#4DD0E1;
+        height:700px;
+        width:450px;
+        float:left;
+        padding:5px;
+        
+    }
     
     footer{
         

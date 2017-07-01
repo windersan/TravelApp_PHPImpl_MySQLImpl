@@ -9,47 +9,88 @@ and open the template in the editor.
         <title>Transaction</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
+
         <link  href="css/styles.css"  rel="stylesheet" type="text/css" >
-        
+
     </head>
     <body>
-        
-        
+
+                <header>Add New Transaction</header>
         <nav>
             <a href=index.html style="color:darkblue"
-               onmouseover="this.style.color='blue'"
-               onmouseout="this.style.color='darkblue'"> Home </a><br/>
+               onmouseover="this.style.color = 'blue'"
+               onmouseout="this.style.color = 'darkblue'"> Home </a><br/>
             <a href=create.html style="color:darkblue"
-               onmouseover="this.style.color='blue'"
-               onmouseout="this.style.color='darkblue'"> New User </a><br/>
+               onmouseover="this.style.color = 'blue'"
+               onmouseout="this.style.color = 'darkblue'"> New User </a><br/>
             <a href=account.html style="color:darkblue"
-               onmouseover="this.style.color='blue'"
-               onmouseout="this.style.color='darkblue'"> Account </a><br/>
+               onmouseover="this.style.color = 'blue'"
+               onmouseout="this.style.color = 'darkblue'"> Account </a><br/>
             <a href=transaction.html style="color:darkblue"
-               onmouseover="this.style.color='blue'"
-               onmouseout="this.style.color='darkblue'"> New Transaction </a><br/>
+               onmouseover="this.style.color = 'blue'"
+               onmouseout="this.style.color = 'darkblue'"> New Transaction </a><br/>
             <a href=photo.html style="color:darkblue"
-               onmouseover="this.style.color='blue'"
-               onmouseout="this.style.color='darkblue'"> Photos and Journal </a><br/>
+               onmouseover="this.style.color = 'blue'"
+               onmouseout="this.style.color = 'darkblue'"> Photos and Journal </a><br/>
             <a href=about.html style="color:darkblue"
-               onmouseover="this.style.color='blue'"
-               onmouseout="this.style.color='darkblue'"> About site </a><br/>
+               onmouseover="this.style.color = 'blue'"
+               onmouseout="this.style.color = 'darkblue'"> About site </a><br/>
             <a href=mybio.html style="color:darkblue"
-               onmouseover="this.style.color='blue'"
-               onmouseout="this.style.color='darkblue'"> About author </a><br/>
+               onmouseover="this.style.color = 'blue'"
+               onmouseout="this.style.color = 'darkblue'"> About author </a><br/>
         </nav>
-        
-        
+
+
         <main>
             <div style="padding:10px">
-                <a href="purchase.html">Add new purchase</a><br/>
-                <a href="deposit.html">Add new deposit</a><br/>
-                <a href="exchange.html">Add new exchange</a><br/>
+
+                <form>
+                    <fieldset>
+                        <legend>Select transaction type:</legend>
+                        <select name="transactions" onchange="transaction(this.value)">
+                            <option value="">Select transaction type</option>
+                            <option value="purchase">purchase</option>
+                            <option value="deposit">deposit</option>
+                            <option value="exchange">exchange</option>
+                        </select>
+
+                        <script type="text/javascript">
+                            function transaction(type) {
+                                if(type.length ==0){return;}
+                                var request = new XMLHttpRequest();
+                                request.onreadystatechange=function(){
+                                    if(request.readyState==4 && request.status == 200){
+                                        document.getElementById("transaction1").innerHTML=
+                                                request.responseText;
+                                    }
+                                        
+                                }
+                                
+                                request.open("POST","transaction.php",true);
+                                request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+                                request.send("transaction1=" + type);
+                            }
+
+
+                        </script>
+
+                    </fieldset>
+                </form>
+                <div id="transaction1"></div>
+                <br><br><br><br>
+                
                 
             </div>
         </main>     
-        
-        
+                
+                
+                 <aside>
+                     <img src="globe.JPG" alt="globe" id="globe" style="padding: 20px; margin: 10px;float:right"/>    
+
+                    
+                </aside>  
+                
+                   <footer>Devin Salemi <br/>8286 Avenida Navidad<br/>San Diego</footer>
+
     </body>
 </html>
